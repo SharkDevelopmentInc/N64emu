@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>N64 Wasm</title>
+    <title>Mario Party 64</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="N64 Emulator, N64 JavaScript Emulator, WebAssembly, HTML5, Nintendo 64">
     <meta charset="UTF-8">
@@ -55,7 +55,7 @@
 <body>
     <div id="maindiv" class="container text-center">
         <h1>
-            N64 Wasm
+            Mario Party 64
         </h1>
         <div id="topPanel" style="display: none;">
 
@@ -63,8 +63,7 @@
             <div rv-if="data.beforeEmulatorStarted">
                 <button id="btnPlayGame" class="btn btn-primary mt-4" onclick="myClass.loadRom();" rv-if="data.hasRoms"
                     rv-disabled="data.moduleInitializing">Play Game</button>
-                <button id="btnUploadRom" class="btn btn-primary mt-4" onclick="myApp.uploadBrowse()"
-                        rv-disabled="data.moduleInitializing">Browse</button>
+                
                 <button type="button" class="btn btn-primary mt-4" id="btnRemap" onclick="myApp.showRemapModal()">
                     Remap Buttons
                 </button>
@@ -178,13 +177,8 @@
 
 
             <div style="margin-top:40px;" rv-if="data.beforeEmulatorStarted">
-                <div id="dropArea" style="width: 150px; height: 150px; border: gray 1px solid;margin-left: auto;
-                    color: darkgrey;margin-right: auto; border-style: dashed;">
-                    <br>
-                    <br>
-                    Drag/Drop 
-                    <br>
-                    Rom File
+                <div id="dropArea">
+                    
                 </div>
             </div>
         </div>
