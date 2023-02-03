@@ -119,7 +119,9 @@
 
                 <!-- ROM LIST -->
                 <div class="form-group mt-2 mb-4" rv-if="data.hasRoms" style="width: 300px;margin-left: auto; margin-right:auto;">
-                    
+                    <select class="form-control" id="romselect">
+                        <option rv-each-rom="data.romList" rv-value="rom.url">{rom.title}</option>
+                    </select>
                 </div>
 
                 <!-- SAVE STATES -->
