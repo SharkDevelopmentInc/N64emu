@@ -65,7 +65,7 @@
                     rv-disabled="data.moduleInitializing">Play Game</button>
                 
                 <button type="button" class="btn btn-primary mt-4" id="btnRemap" onclick="myApp.showRemapModal()">
-                    Controls
+                    Remap Buttons
                 </button>
                 <span rv-if="data.showLogin">
                     <button class="btn btn-primary mt-4" rv-if="data.loggedIn | ev '==false'"
@@ -118,9 +118,9 @@
                 <input id="file-upload" type="file" />
 
                 <!-- ROM LIST -->
-                
-                    <h2>Press the "Play Game" button above to launch Mario Party 64.</h2>
-                
+                <div class="form-group mt-2 mb-4" rv-if="data.hasRoms" style="width: 300px;margin-left: auto; margin-right:auto;">
+                    
+                </div>
 
                 <!-- SAVE STATES -->
                 <div id="dbSaveStates" rv-if="data.loggedIn | ev '==true'">
@@ -200,7 +200,7 @@
 
         <h6 class="card-title mt-4">
             <a href="https://github.com/nbarkhina/n64wasm" target="_blank" style="color: black;">
-                View Emulator source on GitHub
+                View source on GitHub
                 <img src="github_logo.png" style="height: 25px; padding-bottom: 5px; padding-left: 10px;">
             </a>
         </h6>
@@ -312,7 +312,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Controls</h5>
+                    <h5 class="modal-title">Remap Buttons</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
